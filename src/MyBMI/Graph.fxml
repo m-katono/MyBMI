@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyBMI.Graph">
+   <center>
+      <LineChart id="BMIGraph" fx:id="gr1" alternativeColumnFillVisible="true" animated="false" title="BMIグラフ" BorderPane.alignment="CENTER">
+        <xAxis>
+          <CategoryAxis id="xAxis" label="日付" tickLabelGap="2.0" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis id="yAxis" label="BMI" side="LEFT" tickLabelGap="10.0" />
+        </yAxis>
+      </LineChart>
+   </center>
+   <bottom>
+       <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <Button id="btgraph" fx:id="btgraph" mnemonicParsing="false" onAction="#showGraph" text="読込">
+            <HBox.margin>
+               <Insets right="50.0" />
+            </HBox.margin></Button>
+         <Button id="bt32" fx:id="bt32" mnemonicParsing="false" onAction="#clearCLICKED" text="クリア">
+            <HBox.margin>
+               <Insets right="50.0" />
+            </HBox.margin></Button>
+         <Button id="bt31" fx:id="bt31" mnemonicParsing="false" onAction="#closeCLICKED" text="閉じる" />
+       </HBox>
+   </bottom>
+</BorderPane>
